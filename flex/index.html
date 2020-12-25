@@ -28,56 +28,107 @@
             /* 定义项目在交叉轴上如何对齐 */
             align-items: center;
         }
-        #two {
+        #one > .item2 {
+            align-self: flex-start;
+        }
+        #one > .item4 {
+            align-self: flex-end;
+        }
+        #one > .item6 {
+            align-self: stretch;
+        }
+
+        /* #two {
             height: 600px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             align-content: center;
+        } */
+        /* .items1 {
+            order: 5;
         }
-        
+        .items2 {
+            order: 4;
+        }
+        .items3 {
+            order: 3;
+        }
+        .items4 {
+            order: 2;
+        }
+        .items5 {
+            order: 1;
+        } */
+
+        /* #three {
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+        #three > .items {
+            flex-grow: 1;
+            flex-shrink: 0; 
+            flex-basis: 0%;
+        }
+        #three > .items1 {
+            flex: none;
+        }
+        #three > .items2 {
+            flex: auto;
+        }
+        #three > .items3 {
+            flex: none;
+        } */
     </style>
 </head>
 <body>
-    <!-- <div id="one">
+    <div id="one">
         <div class="items">1</div>
-        <div class="items" style="font-size: 80px;">2</div>
+        <div class="items item2" style="font-size: 80px;">2</div>
         <div class="items">3</div>
-        <div class="items">4</div>
+        <div class="items item4">4</div>
         <div class="items">5</div>
-        <div class="items">6</div>
+        <div class="items item6">6</div>
         <div class="items">7</div>
         <div class="items">8</div>
-    </div> -->
-    <div id="two">
-        <div class="items">1</div>
-        <div class="items">2</div>
-        <div class="items">3</div>
-        <div class="items" style="font-size: 80px;">4</div>
-        <div class="items">5</div>
-        <div class="items">6</div>
-        <div class="items">7</div>
-        <div class="items">8</div>
-        <div class="items">9</div>
-        <div class="items">10</div>
-        <div class="items">11</div>
-        <div class="items">12</div>
-        <div class="items">13</div>
-        <div class="items">14</div>
-        <div class="items">1</div>
-        <div class="items">2</div>
-        <div class="items">3</div>
-        <div class="items">4</div>
-        <div class="items">5</div>
-        <div class="items">6</div>
-        <div class="items">7</div>
-        <div class="items">8</div>
-        <div class="items">9</div>
-        <div class="items">10</div>
-        <div class="items">11</div>
-        <div class="items">12</div>
-        <div class="items">13</div>
-        <div class="items">14</div>
     </div>
+
+    <!-- <div id="two">
+        <div class="items items1">1</div>
+        <div class="items items2">2</div>
+        <div class="items items3">3</div>
+        <div class="items items4" style="font-size: 80px;">4</div>
+        <div class="items items5">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+        <div class="items">9</div>
+        <div class="items">10</div>
+        <div class="items">11</div>
+        <div class="items">12</div>
+        <div class="items">13</div>
+        <div class="items">14</div>
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+        <div class="items">9</div>
+        <div class="items">10</div>
+        <div class="items">11</div>
+        <div class="items">12</div>
+        <div class="items">13</div>
+        <div class="items">14</div>
+    </div> -->
+
+    <!-- <div id="three">
+        <div class="items items1">1</div>
+        <div class="items items2">2</div>
+        <div class="items items3">3</div>
+    </div> -->
 </body>
 </html>
