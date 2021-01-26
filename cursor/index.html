@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手写光标</title>
+    <style type="text/css">
+		#input1{
+			position: relative;
+		}
+		@keyframes blink {
+		  0%, 100% {
+		    background-color: #000;
+	  	  }
+		  50% {
+		    background-color: transparent;
+		  } 
+	    }
+		#input1:after {
+			position: absolute;
+		    content: '';
+		    display: inline-block;
+		    width: 2px;
+		    height: 18px;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    animation: blink 1.2s infinite steps(1, start);
+		}
+
+        @keyframes mymove {
+            0% {
+                top: 10px;
+            }
+            50% {
+                top: 150px;;
+            }
+            100% {
+                top: 10px;
+            }
+        }
+
+        #test {
+            width: 10px;
+            height: 10px;
+            background-color: pink;
+            position: relative;
+            animation:mymove 2s infinite;
+        }
+
+        /* #input2{
+			position: relative;
+		}
+		@keyframes underline {
+		  0%, 100% {
+		    background-color: #000;
+		  }
+		  50% {
+		    background-color: transparent;
+		  } 
+	    }
+		#input2:after {
+			position: absolute;
+		    content: '';
+		    width: 30px;
+		    height: 1px;
+		    bottom: 0;
+		    background: #000;
+		    left: 0;
+		} */
+	</style>
+</head>
+<body>
+    <div id="input1">test</div>
+    <div id="test"></div>
+    <!-- <div id="input2">test</div> -->
+</body>
+</html>

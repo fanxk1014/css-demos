@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas-矩形</title>
+</head>
+<body>
+    <canvas id="drawing1" width="300" height="300"></canvas>
+    <img id="pic" src="" alt="">
+
+    <canvas id="drawing2" width="350" height="350"></canvas>
+
+    <script>
+        // 重叠的红蓝矩形
+        let drawing1 = document.getElementById("drawing1");
+        if (drawing1.getContext) {
+            let context = drawing1.getContext("2d");
+
+            context.fillStyle = "red";
+            context.fillRect(10, 10, 200, 200);
+
+            context.fillStyle = "rgba(0, 0, 255, 0.5)";
+            context.fillRect(100, 100, 200, 200);
+
+            // 擦除
+            context.clearRect(145, 145, 20, 20);
+        }
+        // toDataURL默认PNG,并存在跨域问题
+        let url = drawing1.toDataURL("image/png");
+        let pic = document.getElementById("pic");
+        pic.src = url;
+
+        // 重叠的红蓝色框
+        let drawing2 = document.getElementById("drawing2");
+        if (drawing2.getContext) {
+            let context = drawing2.getContext("2d");
+
+            context.strokeStyle = "red";
+            // 线条端点-此处因无端点，因此无效
+            // context.lineCap = "round";
+            context.strokeRect(10, 10, 200, 200);
+
+            context.strokeStyle = "rgba(0, 0, 255, 1)";
+            // 宽度
+            context.lineWidth = 10;
+            // 线条交点
+            context.lineJoin = "bevel";
+            context.strokeRect(100, 100, 200, 200);
+        }
+
+    </script>
+</body>
+</html>
